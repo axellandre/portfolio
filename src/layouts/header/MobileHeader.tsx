@@ -15,14 +15,14 @@ import {
   Stack,
   Tooltip,
   Typography,
-} from "@mui/material";
-import { t } from "i18next";
-import palette from "../../theme/theme";
-import { Fragment, useState } from "react";
-import CloseIcon from "@mui/icons-material/Close";
-import React from "react";
+} from '@mui/material';
+import { t } from 'i18next';
+import palette from '../../theme/theme';
+import { Fragment, useState } from 'react';
+import CloseIcon from '@mui/icons-material/Close';
+import React from 'react';
 
-type Anchor = "left";
+type Anchor = 'left';
 
 export default function MobileHeader() {
   const [state, setState] = useState({
@@ -41,9 +41,9 @@ export default function MobileHeader() {
     (anchor: Anchor, open: boolean) =>
     (event: React.KeyboardEvent | React.MouseEvent) => {
       if (
-        event.type === "keydown" &&
-        ((event as React.KeyboardEvent).key === "Tab" ||
-          (event as React.KeyboardEvent).key === "Shift")
+        event.type === 'keydown' &&
+        ((event as React.KeyboardEvent).key === 'Tab' ||
+          (event as React.KeyboardEvent).key === 'Shift')
       ) {
         return;
       }
@@ -56,8 +56,8 @@ export default function MobileHeader() {
       onClick={toggleDrawer(anchor, false)}
       onKeyDown={toggleDrawer(anchor, false)}
       sx={{
-        width: "100%",
-        height: "100%",
+        width: '100%',
+        height: '100%',
         backgroundColor: palette.primary,
         color: palette.tertiary,
       }}
@@ -65,32 +65,32 @@ export default function MobileHeader() {
       <List>
         <Stack direction="row" justifyContent="space-between" m={2}>
           <Typography variant="h5" fontWeight="700">
-            {t("menu.label")}
+            {t('menu.label')}
           </Typography>
           <CloseIcon />
         </Stack>
       </List>
       <Divider
         sx={{
-          width: "88vw",
+          width: '88vw',
           mx: 3,
           color: palette.white,
-          border: "1px solid",
+          border: '1px solid',
         }}
       />
       <List>
         {[
           <Typography variant="h5" fontWeight="400">
-            {t("menu.home")}
+            {t('menu.home')}
           </Typography>,
           <Typography variant="h5" fontWeight="400">
-            {t("menu.about")}
+            {t('menu.about')}
           </Typography>,
           <Typography variant="h5" fontWeight="400">
-            {t("menu.projects")}
+            {t('menu.projects')}
           </Typography>,
           <Typography variant="h5" fontWeight="400">
-            {t("menu.blog")}
+            {t('menu.blog')}
           </Typography>,
         ].map((text) => (
           <ListItem disablePadding>
@@ -106,7 +106,7 @@ export default function MobileHeader() {
     <>
       <Grid container>
         <Grid item xs={3}>
-          {(["left"] as const).map((anchor) => (
+          {(['left'] as const).map((anchor) => (
             <Fragment key={anchor}>
               <IconButton
                 size="large"
@@ -146,18 +146,18 @@ export default function MobileHeader() {
           <Fragment>
             <Box
               sx={{
-                display: "flex",
-                alignItems: "center",
-                textAlign: "center",
+                display: 'flex',
+                alignItems: 'center',
+                textAlign: 'center',
               }}
             >
               <Tooltip title="Account settings">
                 <IconButton
                   onClick={handleClick}
                   size="large"
-                  aria-controls={open ? "account-menu" : undefined}
+                  aria-controls={open ? 'account-menu' : undefined}
                   aria-haspopup="true"
-                  aria-expanded={open ? "true" : undefined}
+                  aria-expanded={open ? 'true' : undefined}
                 >
                   <Box
                     component="img"
@@ -177,29 +177,29 @@ export default function MobileHeader() {
               PaperProps={{
                 elevation: 0,
                 sx: {
-                  overflow: "visible",
-                  filter: "drop-shadow(0px 2px 8px rgba(0,0,0,0.32))",
+                  overflow: 'visible',
+                  filter: 'drop-shadow(0px 2px 8px rgba(0,0,0,0.32))',
                   mt: 0.5,
-                  "& .MuiAvatar-root": {
+                  '& .MuiAvatar-root': {
                     width: 32,
                     height: 32,
                   },
-                  "&:before": {
+                  '&:before': {
                     content: '""',
-                    display: "block",
-                    position: "absolute",
+                    display: 'block',
+                    position: 'absolute',
                     top: 0,
                     right: 25,
                     width: 10,
                     height: 10,
-                    bgcolor: "background.paper",
-                    transform: "translateY(-50%) rotate(45deg)",
+                    bgcolor: 'background.paper',
+                    transform: 'translateY(-50%) rotate(45deg)',
                     zIndex: 0,
                   },
                 },
               }}
-              transformOrigin={{ horizontal: "right", vertical: "top" }}
-              anchorOrigin={{ horizontal: "right", vertical: "bottom" }}
+              transformOrigin={{ horizontal: 'right', vertical: 'top' }}
+              anchorOrigin={{ horizontal: 'right', vertical: 'bottom' }}
             >
               <MenuItem onClick={handleClose}>
                 <Stack direction="row" spacing={2} alignItems="center">
@@ -209,7 +209,7 @@ export default function MobileHeader() {
                       alt="fr_flag"
                       src="/src/assets/fr_flag.svg"
                       sx={{
-                        filter: "drop-shadow(0px 2px 4px rgba(0,0,0,0.32))",
+                        filter: 'drop-shadow(0px 2px 4px rgba(0,0,0,0.32))',
                       }}
                     />
                   </ListItemIcon>
@@ -217,13 +217,13 @@ export default function MobileHeader() {
                     textTransform="uppercase"
                     variant="h6"
                     sx={{
-                      fontStyle: "normal",
+                      fontStyle: 'normal',
                       fontWeight: 700,
-                      lineHeight: "normal",
+                      lineHeight: 'normal',
                       color: palette.primary,
                     }}
                   >
-                    {t("menu.fr")}
+                    {t('menu.fr')}
                   </Typography>
                 </Stack>
               </MenuItem>
@@ -235,7 +235,7 @@ export default function MobileHeader() {
                       alt="en_flag"
                       src="/src/assets/en_flag.svg"
                       sx={{
-                        filter: "drop-shadow(0px 2px 4px rgba(0,0,0,0.32))",
+                        filter: 'drop-shadow(0px 2px 4px rgba(0,0,0,0.32))',
                       }}
                     />
                   </ListItemIcon>
@@ -243,13 +243,13 @@ export default function MobileHeader() {
                     textTransform="uppercase"
                     variant="h6"
                     sx={{
-                      fontStyle: "normal",
+                      fontStyle: 'normal',
                       fontWeight: 700,
-                      lineHeight: "normal",
+                      lineHeight: 'normal',
                       color: palette.primary,
                     }}
                   >
-                    {t("menu.en")}
+                    {t('menu.en')}
                   </Typography>
                 </Stack>
               </MenuItem>

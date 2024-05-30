@@ -1,13 +1,13 @@
-import { Typography, Link, Grid } from "@mui/material";
-import { Stack, Box } from "@mui/system";
-import { t } from "i18next";
-import { menuItems } from "../../routes/paths";
-import palette from "../../theme/theme";
-import { NavLink } from "react-router-dom";
-import useResponsive from "../../hooks/useResponsive";
+import { Typography, Link, Grid } from '@mui/material';
+import { Stack, Box } from '@mui/system';
+import { t } from 'i18next';
+import { menuItems } from '../../routes/paths';
+import palette from '../../theme/theme';
+import { NavLink } from 'react-router-dom';
+import useResponsive from '../../hooks/useResponsive';
 
 export default function DesktopHeader() {
-  const isDesktop = useResponsive("up", "md");
+  const isDesktop = useResponsive('up', 'md');
 
   return (
     <>
@@ -36,10 +36,37 @@ export default function DesktopHeader() {
             direction="row"
             justifyContent="flex-end"
             gap={5}
-            sx={{ mr: { xs: 20, sm: 15, md: 10, lg: 5 } }}
+            sx={{
+              mr: { xs: 20, sm: 15, md: 10, lg: 5 },
+              '.nav-item': {
+                position: 'relative',
+                '&:before': {
+                  content: '""',
+                  position: 'absolute',
+                  width: '100%',
+                  height: 3,
+                  bottom: 0,
+                  left: 0,
+                  margin: '-5px 0',
+                  backgroundColor: palette.primary,
+                  visibility: 'hidden',
+                  transform: 'scaleX(0)',
+                  transformOrigin: ' top left',
+                  transition: 'transform 0.2s ease',
+                },
+                '&:hover:before': {
+                  visibility: 'visible',
+                  transform: 'scaleX(1)',
+                },
+              },
+            }}
           >
             {menuItems.map((menuItem) => (
-              <NavLink key={menuItem.path} to={menuItem.path}>
+              <NavLink
+                key={menuItem.path}
+                to={menuItem.path}
+                className="nav-item"
+              >
                 <Typography
                   variant="h6"
                   fontWeight="700"
