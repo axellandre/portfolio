@@ -1,11 +1,11 @@
-import { useTranslation } from 'react-i18next'; // Importez useTranslation
+// src/layouts/header/Header.js
+import { useTranslation } from 'react-i18next';
 import MobileHeader from './MobileHeader';
 import DesktopHeader from './DesktopHeader';
 import useResponsive from '../../hooks/useResponsive';
 
 export default function Header() {
-  const { t } = useTranslation(); // Utilisez useTranslation
-  
+  const { t } = useTranslation();
   const isDesktop = useResponsive('up', 'md');
 
   if (!isDesktop) {

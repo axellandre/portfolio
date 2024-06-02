@@ -1,8 +1,8 @@
-import { Typography, Link, Grid } from '@mui/material';
+import { Typography, Grid } from '@mui/material';
 import { Stack, Box } from '@mui/system';
 import { menuItems } from '../../routes/paths';
 import palette from '../../theme/theme';
-import { NavLink } from 'react-router-dom';
+import { HashLink as Link } from 'react-router-hash-link';
 import useResponsive from '../../hooks/useResponsive';
 import { TFunction } from 'i18next';
 
@@ -19,7 +19,7 @@ export default function DesktopHeader({ t }: { t: TFunction }) {
         mt={1}
       >
         <Grid item xs={2}>
-          <Link href="/home">
+          <Link to="/home">
             <Box
               component="img"
               loading='lazy'
@@ -63,7 +63,7 @@ export default function DesktopHeader({ t }: { t: TFunction }) {
             }}
           >
             {menuItems.map((menuItem) => (
-              <NavLink
+              <Link
                 key={menuItem.path}
                 to={menuItem.path}
                 className="nav-item"
@@ -75,7 +75,7 @@ export default function DesktopHeader({ t }: { t: TFunction }) {
                 >
                   {t(menuItem.translationKey)}
                 </Typography>
-              </NavLink>
+              </Link>
             ))}
           </Stack>
         </Grid>
@@ -90,7 +90,7 @@ export default function DesktopHeader({ t }: { t: TFunction }) {
                 color: palette.primary,
               }}
             >
-              <Link target="_blank" href="mailto:a.landre@proxiad.com">
+              <Link smooth target="_blank" to={'mailto:a.landre@proxiad.com'}>
                 <Box
                   component="img"
                   width="30px"
@@ -101,7 +101,8 @@ export default function DesktopHeader({ t }: { t: TFunction }) {
               </Link>
               <Link
                 target="_blank"
-                href="https://www.linkedin.com/in/axel-landr%C3%A9-083a43172/"
+       
+                to={"https://www.linkedin.com/in/axel-landr%C3%A9-083a43172/"}
               >
                 <Box
                   component="img"
@@ -111,7 +112,7 @@ export default function DesktopHeader({ t }: { t: TFunction }) {
                   src="/src/assets/linkedin.svg"
                 />
               </Link>
-              <Link target="_blank" href="https://github.com/axellandre">
+              <Link target="_blank" to="https://github.com/axellandre">
                 <Box
                   component="img"
                   loading='lazy'

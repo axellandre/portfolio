@@ -44,6 +44,9 @@ importers:
       react-router-dom:
         specifier: ^6.14.2
         version: 6.14.2(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      react-router-hash-link:
+        specifier: ^2.4.3
+        version: 2.4.3(react-router-dom@6.14.2(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(react@18.2.0)
       react-scroll:
         specifier: ^1.9.0
         version: 1.9.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
@@ -60,6 +63,9 @@ importers:
       '@types/react-dom':
         specifier: ^18.2.7
         version: 18.2.7
+      '@types/react-router-hash-link':
+        specifier: ^2.4.9
+        version: 2.4.9
       '@types/react-scroll':
         specifier: ^1.8.10
         version: 1.8.10
@@ -1184,6 +1190,9 @@ packages:
   '@types/fullpage.js@2.9.6':
     resolution: {integrity: sha512-NNl9nQc2g7C0Dc7rokZhyy8IJJh/HNVdPE23Tne6nb6rOknetNzwu3gBNP/zMRMeawHRe8i149yWrpzJ4lUwxg==}
 
+  '@types/history@4.7.11':
+    resolution: {integrity: sha512-qjDJRrmvBMiTx+jyLxvLfJU7UznFuokDv4f3WRuriHKERccVpFU+8XMQUAbDzoiJCsmexxRExQeMwwCdamSKDA==}
+
   '@types/jquery@3.5.30':
     resolution: {integrity: sha512-nbWKkkyb919DOUxjmRVk8vwtDb0/k8FKncmUKFi+NY+QXqWltooxTrswvz4LspQwxvLdvzBN1TImr6cw3aQx2A==}
 
@@ -1201,6 +1210,15 @@ packages:
 
   '@types/react-is@18.2.1':
     resolution: {integrity: sha512-wyUkmaaSZEzFZivD8F2ftSyAfk6L+DfFliVj/mYdOXbVjRcS87fQJLTnhk6dRZPuJjI+9g6RZJO4PNCngUrmyw==}
+
+  '@types/react-router-dom@5.3.3':
+    resolution: {integrity: sha512-kpqnYK4wcdm5UaWI3fLcELopqLrHgLqNsdpHauzlQktfkHL3npOSwtj1Uz9oKBAzs7lFtVkV8j83voAz2D8fhw==}
+
+  '@types/react-router-hash-link@2.4.9':
+    resolution: {integrity: sha512-zl/VMj+lfJZhvjOAQXIlBVPNKSK+/fRG8AUHhlP9++LhlA2ziLeTmbRxIMJI3PCiCTS+W/FosEoDRoNOGH0OzA==}
+
+  '@types/react-router@5.1.20':
+    resolution: {integrity: sha512-jGjmu/ZqS7FjSH6owMcD5qpq19+1RS9DeVRqfl1FeBMxTDQAGwlMWOcs52NDoXaNKyG3d1cYQFMs9rCrb88o9Q==}
 
   '@types/react-scroll@1.8.10':
     resolution: {integrity: sha512-RD4Z7grbdNGOKwKnUBKar6zNxqaW3n8m9QSrfvljW+gmkj1GArb8AFBomVr6xMOgHPD3v1uV3BrIf01py57daQ==}
@@ -1889,6 +1907,12 @@ packages:
     peerDependencies:
       react: '>=16.8'
       react-dom: '>=16.8'
+
+  react-router-hash-link@2.4.3:
+    resolution: {integrity: sha512-NU7GWc265m92xh/aYD79Vr1W+zAIXDWp3L2YZOYP4rCqPnJ6LI6vh3+rKgkidtYijozHclaEQTAHaAaMWPVI4A==}
+    peerDependencies:
+      react: '>=15'
+      react-router-dom: '>=4'
 
   react-router@6.14.2:
     resolution: {integrity: sha512-09Zss2dE2z+T1D03IheqAFtK4UzQyX8nFPWx6jkwdYzGLXd5ie06A6ezS2fO6zJfEb/SpG6UocN2O1hfD+2urQ==}
@@ -3326,6 +3350,8 @@ snapshots:
     dependencies:
       '@types/jquery': 3.5.30
 
+  '@types/history@4.7.11': {}
+
   '@types/jquery@3.5.30':
     dependencies:
       '@types/sizzle': 2.3.8
@@ -3342,6 +3368,23 @@ snapshots:
 
   '@types/react-is@18.2.1':
     dependencies:
+      '@types/react': 18.2.15
+
+  '@types/react-router-dom@5.3.3':
+    dependencies:
+      '@types/history': 4.7.11
+      '@types/react': 18.2.15
+      '@types/react-router': 5.1.20
+
+  '@types/react-router-hash-link@2.4.9':
+    dependencies:
+      '@types/history': 4.7.11
+      '@types/react': 18.2.15
+      '@types/react-router-dom': 5.3.3
+
+  '@types/react-router@5.1.20':
+    dependencies:
+      '@types/history': 4.7.11
       '@types/react': 18.2.15
 
   '@types/react-scroll@1.8.10':
@@ -4080,6 +4123,12 @@ snapshots:
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
       react-router: 6.14.2(react@18.2.0)
+
+  react-router-hash-link@2.4.3(react-router-dom@6.14.2(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(react@18.2.0):
+    dependencies:
+      prop-types: 15.8.1
+      react: 18.2.0
+      react-router-dom: 6.14.2(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
 
   react-router@6.14.2(react@18.2.0):
     dependencies:
