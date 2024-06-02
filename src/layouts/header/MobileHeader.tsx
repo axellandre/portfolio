@@ -16,7 +16,7 @@ import {
   Tooltip,
   Typography,
 } from '@mui/material';
-import { t } from 'i18next';
+import { TFunction} from 'i18next';
 import palette from '../../theme/theme';
 import { Fragment, useState } from 'react';
 import CloseIcon from '@mui/icons-material/Close';
@@ -24,7 +24,7 @@ import React from 'react';
 
 type Anchor = 'left';
 
-export default function MobileHeader() {
+export default function MobileHeader({ t }: { t: TFunction }) {
   const [state, setState] = useState({
     left: false,
   });
@@ -50,6 +50,7 @@ export default function MobileHeader() {
 
       setState({ ...state, [anchor]: open });
     };
+
 
   const list = (anchor: Anchor) => (
     <Box
@@ -116,6 +117,7 @@ export default function MobileHeader() {
                 <Box
                   component="img"
                   alt="character"
+                  loading='lazy'
                   src="/src/assets/menu.svg"
                 />
               </IconButton>
@@ -133,6 +135,7 @@ export default function MobileHeader() {
           <Link href="/home">
             <Box
               component="img"
+              loading='lazy'
               sx={{
                 maxWidth: { xs: 500, md: 50 },
                 mt: 1,
@@ -162,6 +165,7 @@ export default function MobileHeader() {
                   <Box
                     component="img"
                     alt="character"
+                    loading='lazy'
                     src="/src/assets/languages.svg"
                     sx={{ ml: 3 }}
                   />
@@ -207,6 +211,7 @@ export default function MobileHeader() {
                     <Box
                       component="img"
                       alt="fr_flag"
+                      loading='lazy'
                       src="/src/assets/fr_flag.svg"
                       sx={{
                         filter: 'drop-shadow(0px 2px 4px rgba(0,0,0,0.32))',
@@ -234,6 +239,8 @@ export default function MobileHeader() {
                       component="img"
                       alt="en_flag"
                       src="/src/assets/en_flag.svg"
+                      loading='lazy'
+
                       sx={{
                         filter: 'drop-shadow(0px 2px 4px rgba(0,0,0,0.32))',
                       }}

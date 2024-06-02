@@ -1,3 +1,4 @@
+import i18n from '../locales/i18n';
 import Grid from '@mui/material/Grid';
 import { Box, Stack } from '@mui/system';
 import { Divider, Link, Typography } from '@mui/material';
@@ -6,10 +7,29 @@ import { t } from 'i18next';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import SouthIcon from '@mui/icons-material/South';
 import useResponsive from '../hooks/useResponsive';
+import { useEffect, useState } from 'react';
+import frFlagBW from '/src/assets/fr_flag_bw.svg';
+import enFlagBW from '/src/assets/en_flag_bw.svg';
 
 export default function HomePage() {
   const isDesktop = useResponsive('up', 'sm');
   const isTablet = useResponsive('only', 'sm');
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const [currentLanguage, setCurrentLanguage] = useState('en');
+
+  useEffect(() => {
+    const savedLanguage = localStorage.getItem('language') || 'en';
+    setCurrentLanguage(savedLanguage);
+    i18n.changeLanguage(savedLanguage);
+  }, []);
+  
+
+  const handleLanguageChange = (lng : string) => {
+    i18n.changeLanguage(lng).then(() => {
+      localStorage.setItem('language', lng);
+      setCurrentLanguage(lng);
+    });
+  };
 
   if (isDesktop && !isTablet) {
     return (
@@ -108,6 +128,7 @@ export default function HomePage() {
             component="img"
             alt="character"
             src="/src/assets/character.svg"
+            loading='lazy'
             sx={{
               top: 50,
               right: 50,
@@ -150,21 +171,6 @@ export default function HomePage() {
                 {t('home.job')}
               </Typography>
             </Stack>
-            {/* <Stack width="90%">
-              <Typography
-                variant="h5"
-                sx={{
-                  color: palette.primary,
-                  fontStyle: "normal",
-                  fontWeight: 600,
-                  lineHeight: "normal",
-                  p: 1,
-                  m: 0,
-                }}
-              >
-                {t("home.technologies")}
-              </Typography>
-            </Stack> */}
             <Link
               href="/about"
               sx={{ textDecorationLine: 'none', color: palette.secondary }}
@@ -196,7 +202,10 @@ export default function HomePage() {
               <Box
                 component="img"
                 alt="fr_flag"
-                src="/src/assets/fr_flag.svg"
+                src={currentLanguage === 'fr' ? '/src/assets/fr_flag.svg' : frFlagBW } 
+                loading='lazy'
+                onClick={() => handleLanguageChange('fr')}
+                sx={{ cursor: 'pointer' }}
               />
             </Stack>
             <Stack
@@ -210,7 +219,10 @@ export default function HomePage() {
               <Box
                 component="img"
                 alt="en_flag"
-                src="/src/assets/en_flag.svg"
+                src={currentLanguage === 'en' ? '/src/assets/en_flag.svg' : enFlagBW } 
+                loading='lazy'
+                onClick={() => handleLanguageChange('en')}
+                sx={{ cursor: 'pointer' }}
               />
             </Stack>
           </Stack>
@@ -322,6 +334,7 @@ export default function HomePage() {
             component="img"
             alt="character"
             src="/src/assets/character.svg"
+            loading='lazy'
             sx={{
               top: 0,
               bottom: 0,
@@ -332,6 +345,35 @@ export default function HomePage() {
               margin: 'auto auto 0',
             }}
           />
+        </Stack>
+        <Stack direction="row" alignContent="center" justifyContent="center" mt={2}>
+          <Stack>
+            <Box
+              component="img"
+              alt="fr_flag"
+              src="/src/assets/fr_flag.svg"
+              loading='lazy'
+              onClick={() => handleLanguageChange('fr')}
+              sx={{ cursor: 'pointer' }}
+            />
+          </Stack>
+          <Stack
+            sx={{
+              border: `1px solid`,
+              color: palette.primary,
+              mx: 2,
+            }}
+          ></Stack>
+          <Stack>
+            <Box
+              component="img"
+              alt="en_flag"
+              src="/src/assets/en_flag.svg"
+              loading='lazy'
+              onClick={() => handleLanguageChange('en')}
+              sx={{ cursor: 'pointer' }}
+            />
+          </Stack>
         </Stack>
       </Stack>
     );
@@ -440,6 +482,7 @@ export default function HomePage() {
             component="img"
             alt="character"
             src="/src/assets/character.svg"
+            loading='lazy'
             sx={{
               top: 0,
               bottom: 0,
@@ -450,6 +493,35 @@ export default function HomePage() {
               margin: 'auto auto 0',
             }}
           />
+        </Stack>
+        <Stack direction="row" alignContent="center" justifyContent="center" mt={2}>
+          <Stack>
+            <Box
+              component="img"
+              alt="fr_flag"
+              src="/src/assets/fr_flag.svg"
+              loading='lazy'
+              onClick={() => handleLanguageChange('fr')}
+              sx={{ cursor: 'pointer' }}
+            />
+          </Stack>
+          <Stack
+            sx={{
+              border: `1px solid`,
+              color: palette.primary,
+              mx: 2,
+            }}
+          ></Stack>
+          <Stack>
+            <Box
+              component="img"
+              alt="en_flag"
+              src="/src/assets/en_flag.svg"
+              loading='lazy'
+              onClick={() => handleLanguageChange('en')}
+              sx={{ cursor: 'pointer' }}
+            />
+          </Stack>
         </Stack>
       </Stack>
     );

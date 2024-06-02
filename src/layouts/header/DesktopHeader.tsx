@@ -1,12 +1,12 @@
 import { Typography, Link, Grid } from '@mui/material';
 import { Stack, Box } from '@mui/system';
-import { t } from 'i18next';
 import { menuItems } from '../../routes/paths';
 import palette from '../../theme/theme';
 import { NavLink } from 'react-router-dom';
 import useResponsive from '../../hooks/useResponsive';
+import { TFunction } from 'i18next';
 
-export default function DesktopHeader() {
+export default function DesktopHeader({ t }: { t: TFunction }) {
   const isDesktop = useResponsive('up', 'md');
 
   return (
@@ -22,6 +22,7 @@ export default function DesktopHeader() {
           <Link href="/home">
             <Box
               component="img"
+              loading='lazy'
               sx={{
                 maxHeight: { xs: 50, md: 50 },
                 maxWidth: { xs: 50, md: 50 },
@@ -93,6 +94,7 @@ export default function DesktopHeader() {
                 <Box
                   component="img"
                   width="30px"
+                  loading='lazy'
                   alt="mail"
                   src="/src/assets/mail.svg"
                 />
@@ -105,15 +107,17 @@ export default function DesktopHeader() {
                   component="img"
                   width="30px"
                   alt="linkedin"
+                  loading='lazy'
                   src="/src/assets/linkedin.svg"
                 />
               </Link>
-              <Link target="_blank" href="https://www.instagram.com/axel.lnd_/">
+              <Link target="_blank" href="https://github.com/axellandre">
                 <Box
                   component="img"
+                  loading='lazy'
                   width="30px"
-                  alt="instagram"
-                  src="/src/assets/instagram.svg"
+                  alt="github"
+                  src="/src/assets/github.svg"
                 />
               </Link>
             </Stack>

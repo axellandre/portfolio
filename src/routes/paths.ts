@@ -4,3 +4,4 @@ export const menuItems = [
   { path: '/projects', translationKey: 'menu.projects' },
   { path: '/blog', translationKey: 'menu.blog' },
 ];
+ 

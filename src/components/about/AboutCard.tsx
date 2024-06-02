@@ -38,6 +38,7 @@ export default function AboutCard({ title, pathIcon, backContent }: Props) {
         component="img"
         alt="character"
         src={pathIcon}
+        loading='lazy'
         sx={{
           height: 'auto',
           mb: 3,

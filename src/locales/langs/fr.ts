@@ -35,6 +35,9 @@ const fr = {
     design: 'UI/UX Design',
     development: 'Développement web',
     analysis: 'Analyses & recherches',
+    description: "Je suis un développeur Frontend passionné par la création d'expériences utilisateur exceptionnelles et performantes. Avec une expertise approfondie dans les technologies modernes telles que TypeScript, React.js et Next.js, je m'efforce de concevoir des interfaces utilisateur intuitives et réactives qui offrent une valeur réelle aux utilisateurs.",
+    skills: 'Mes compétences principales :',
+    skillsDescriptions : "TypeScript : J'ai une solide expérience dans l'utilisation de TypeScript pour créer des applications Web robustes et évolutives. En utilisant TypeScript, je peux détecter les erreurs à la compilation et garantir une meilleure qualité du code. React.js : Je suis passionné par React.js et je l'utilise pour construire des interfaces utilisateur interactives et dynamiques. En utilisant des concepts tels que les composants, le contexte et les hooks, je peux créer des applications React modulaires et faciles à maintenir. Next.js : J'ai une expérience pratique de l'utilisation de Next.js pour créer des applications Web performantes et optimisées pour le référencement. Avec Next.js, je peux facilement gérer le routage côté serveur, le rendu côté client et la génération de pages statiques, ce qui permet d'obtenir des performances exceptionnelles."
   },
 };
 

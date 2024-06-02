@@ -27,6 +27,7 @@ export default function AboutPage() {
           >
             {t('about.label')}
           </Typography>
+          
         </Grid>
         {!isDesktop && (
           <Stack margin="auto" my={2}>

@@ -4,7 +4,7 @@ import App from "./App.tsx";
 import "./index.css";
 import CssBaseline from "@mui/material/CssBaseline";
 import { I18nextProvider } from "react-i18next";
-import i18n from "../src/locales/i18n"; // Import the i18n configuration
+import i18n from "../src/locales/i18n";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>

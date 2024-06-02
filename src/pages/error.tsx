@@ -19,6 +19,7 @@ export default function ErrorPage() {
             component="img"
             alt="character"
             src="/src/assets/logo_error.svg"
+            loading='lazy'
             sx={{
               width: "40vh",
             }}
@@ -129,6 +130,7 @@ export default function ErrorPage() {
         component="img"
         alt="character"
         src="/src/assets/logo_error.svg"
+        loading='lazy'
         sx={{
           width: "40vh",
         }}
