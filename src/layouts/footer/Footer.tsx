@@ -1,4 +1,3 @@
-// src/layouts/footer/Footer.js
 import { Stack, Box, Divider } from "@mui/material";
 import { useState, useContext } from 'react';
 import { LanguageContext } from '../../layouts/context/LanguageProvider';

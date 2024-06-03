@@ -2,13 +2,15 @@ import Grid from '@mui/material/Grid';
 import { Box, Stack } from '@mui/system';
 import { Divider, Link, Typography } from '@mui/material';
 import palette from '../theme/theme';
-import { t } from 'i18next';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import useResponsive from '../hooks/useResponsive';
+import { useTranslation } from 'react-i18next';
 
 export default function HomePage() {
   const isDesktop = useResponsive('up', 'sm');
   const isTablet = useResponsive('only', 'sm');
+  const { t } = useTranslation();
+
   
   if (isDesktop && !isTablet) {
     return (

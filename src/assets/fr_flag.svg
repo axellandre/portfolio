@@ -8,8 +8,8 @@
 </mask>
 <g mask="url(#mask0_5_223)">
 <g id="Group_2">
-<path id="Vector_2" fill-rule="evenodd" clip-rule="evenodd" d="M35.0625 0H51V33.0782H35.0625V0Z" fill="#D4AF37"/>
-<path id="Vector_3" fill-rule="evenodd" clip-rule="evenodd" d="M0 0H19.125V33.0782H0V0Z" fill="#2C4243"/>
+<path id="Vector_2" fill-rule="evenodd" clip-rule="evenodd" d="M35.0625 0H51V33.0782H35.0625V0Z" fill="#FF0000"/>
+<path id="Vector_3" fill-rule="evenodd" clip-rule="evenodd" d="M0 0H19.125V33.0782H0V0Z" fill="#00008B"/>
 <path id="Vector_4" fill-rule="evenodd" clip-rule="evenodd" d="M15.9375 0H35.0625V33.0782H15.9375V0Z" fill="white"/>
 </g>
 </g>

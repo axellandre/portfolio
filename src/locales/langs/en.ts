@@ -20,7 +20,16 @@ const en = {
     moreInformations: 'More informations',
   },
   about: {
-    description: "I am a passionate <span class='highlight'> full-stack TypeScript developer</span> specializing in creating dynamic and user-friendly graphical interfaces. My in-depth expertise in modern technologies such as <span class='highlight'>TypeScript</span>, <span class='highlight'>React.js, and Next.js</span> enables me to design intuitive and responsive user interfaces."  }
+    description: "I am a passionate <span class='highlight'> full-stack TypeScript developer</span> specializing in creating dynamic and user-friendly graphical interfaces. My in-depth expertise in modern technologies such as <span class='highlight'>TypeScript</span>, <span class='highlight'>React.js, and Next.js</span> enables me to design intuitive and responsive user interfaces."  
+  },
+  error: {
+    four: "4",
+    zero: "0",
+    pageNotFound: "Sorry, page not found!",
+    pageNotFoundDescription: "Sorry, we didn't find the page you were looking for.",
+    urlError: "Maybe you mistyped the URL?",
+    verifySyntax: "Check your spelling."
+  },
 };
 
 export default en;

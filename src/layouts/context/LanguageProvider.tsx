@@ -1,11 +1,24 @@
-// src/contexts/LanguageContext.js
-import React, { createContext, useState, useEffect } from 'react';
+import { createContext, useState, useEffect, ReactNode } from 'react';
 import i18n from '../../locales/i18n';
 
-export const LanguageContext = createContext();
+interface LanguageContextProps {
+  currentLanguage: string;
+  changeLanguage: (lng: string) => void;
+}
 
-export const LanguageProvider = ({ children }) => {
-  const [currentLanguage, setCurrentLanguage] = useState('en');
+const defaultValue: LanguageContextProps = {
+  currentLanguage: 'fr',
+  changeLanguage: () => {}
+};
+
+export const LanguageContext = createContext<LanguageContextProps>(defaultValue);
+
+interface LanguageProviderProps {
+  children: ReactNode;
+}
+
+export const LanguageProvider = ({ children }: LanguageProviderProps) => {
+  const [currentLanguage, setCurrentLanguage] = useState('fr');
 
   useEffect(() => {
     const savedLanguage = localStorage.getItem('language') || 'en';

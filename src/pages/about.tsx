@@ -1,4 +1,3 @@
-// src/pages/AboutPage.js
 import { Typography, Grid, Container, Stack, Divider, Box } from '@mui/material';
 import { useTranslation } from 'react-i18next';
 import palette from '../theme/theme';

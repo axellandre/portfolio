@@ -1,12 +1,8 @@
 import { useTheme, Breakpoint } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
 
-// ----------------------------------------------------------------------
-
 type ReturnType = boolean;
-
 type Query = 'up' | 'down' | 'between' | 'only';
-
 type Value = Breakpoint | number;
 
 export default function useResponsive(
@@ -17,13 +13,10 @@ export default function useResponsive(
   const theme = useTheme();
 
   const mediaUp = useMediaQuery(theme.breakpoints.up(start as Value));
-
   const mediaDown = useMediaQuery(theme.breakpoints.down(start as Value));
-
   const mediaBetween = useMediaQuery(
     theme.breakpoints.between(start as Value, end as Value)
   );
-
   const mediaOnly = useMediaQuery(theme.breakpoints.only(start as Breakpoint));
 
   if (query === 'up') {
@@ -40,8 +33,6 @@ export default function useResponsive(
 
   return mediaOnly;
 }
-
-// ----------------------------------------------------------------------
 
 type BreakpointOrNull = Breakpoint | null;
 

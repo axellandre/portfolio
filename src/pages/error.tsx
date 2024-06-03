@@ -1,10 +1,12 @@
 import { Box, Typography, Stack } from "@mui/material";
-import { t } from "i18next";
 import palette from "../theme/theme";
 import useResponsive from "../hooks/useResponsive";
+import { useTranslation } from "react-i18next";
 
 export default function ErrorPage() {
   const isDesktop = useResponsive("up", "sm");
+    const { t } = useTranslation();
+
   if (isDesktop) {
     return (
       <Box
