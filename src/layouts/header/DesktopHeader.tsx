@@ -62,21 +62,21 @@ export default function DesktopHeader({ t }: { t: TFunction }) {
               },
             }}
           >
-            {menuItems.map((menuItem) => (
-              <Link
-                key={menuItem.path}
-                to={menuItem.path}
-                className="nav-item"
+          {menuItems.map((menuItem) => (
+            <Link
+              key={menuItem.path}
+              to={menuItem.path}
+              className={`nav-item ${menuItem.path === '/blog' || menuItem.path === '/projects' ? 'disabled' : ''}`}
+              style={{ pointerEvents: menuItem.path === '/blog' || menuItem.path === '/projects' ? 'none' : 'auto', color: menuItem.path === '/blog' || menuItem.path === '/projects' ? '#999' : palette.primary }}
+            >
+              <Typography
+                variant="h6"
+                fontWeight="700"
               >
-                <Typography
-                  variant="h6"
-                  fontWeight="700"
-                  sx={{ color: palette.primary }}
-                >
-                  {t(menuItem.translationKey)}
-                </Typography>
-              </Link>
-            ))}
+                {t(menuItem.translationKey)}
+              </Typography>
+            </Link>
+          ))}
           </Stack>
         </Grid>
         {isDesktop && (
