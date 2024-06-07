@@ -30,14 +30,14 @@
   position: absolute;
   bottom: 0.1em;
   left: 0;
-  bottom: -0,6rem;
   height: 0.8em;
   width: 100%;
-  background: linear-gradient(90deg, rgba(212, 175, 53, 0.173) 0%, rgba(212, 175, 53, 0.282) 50%, rgba(212, 175, 53, 0.381) 100%);
+  background: linear-gradient(90deg, rgba(212, 175, 53, 0.173) 0%, rgba(212, 175, 53, 0.282) 50%, rgba(194, 154, 20, 0.552) 100%);
   transform-origin: left;
   transform: scaleX(0);
   border-radius: 1em 0 1em 0;
   animation: highlight 1s linear forwards;
+  z-index: -1;
 }
 
 .highlight::after {
@@ -46,9 +46,10 @@
   right: 0;
   height: 0.8em;
   width: 100%;
-  background: linear-gradient(90deg, rgba(212, 175, 53, 0.188) 100%, rgba(212, 175, 53, 0.282) 50%, rgba(212, 175, 53, 0.374) 0%);
+  background: linear-gradient(90deg, rgba(194, 154, 20, 0.552) 100%, rgba(212, 175, 53, 0.282) 50%, rgba(212, 175, 53, 0.188) 0%);
   transform-origin: right;
   transform: scaleX(0);
   border-radius: 1em 0 1em 0;
   animation: highlight-reverse 1s linear 1s forwards;
+  z-index: -1;
 }
