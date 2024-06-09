@@ -20,7 +20,7 @@ const en = {
     moreInformations: 'More informations',
   },
   about: {
-    description: "I am a passionate <span class='highlight'> full-stack TS developer</span> specializing in creating dynamic and user-friendly graphical interfaces. My in-depth expertise in modern technologies such as <span class='highlight'>Typescript</span>, <span class='highlight'>Nestjs, and Next.js</span> enables me to design intuitive and responsive user interfaces."  
+    description: "I am a passionate <span class='highlight'> full-stack JS/TS developer</span> specializing in creating dynamic and user-friendly graphical interfaces. My in-depth expertise in modern technologies such as <span class='highlight'>React</span>, <span class='highlight'>Next, and Nest</span> enables me to design intuitive and responsive user interfaces."  
   },
   error: {
     four: "4",
@@ -30,6 +30,9 @@ const en = {
     urlError: "Maybe you mistyped the URL?",
     verifySyntax: "Check your spelling."
   },
+  projects: {
+    comingSoon: "Coming soon..."
+  }
 };
 
 export default en;

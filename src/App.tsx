@@ -7,6 +7,7 @@ import AboutPage from './pages/about';
 import ErrorPage from './pages/error';
 import HomePage from './pages/home';
 import { LanguageProvider } from './layouts/context/LanguageProvider';
+import ProjectsPage from './pages/projects';
 
 export default function App() {
   const router = createBrowserRouter([
@@ -22,6 +23,10 @@ export default function App() {
         {
           path: 'about',
           element: <AboutPage />,
+        },
+                {
+          path: 'projects',
+          element: <ProjectsPage />,
         },
         {
           path: '*',

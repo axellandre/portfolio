@@ -5,11 +5,13 @@ import frFlagBW from '/src/assets/fr_flag_bw.svg';
 import enFlagBW from '/src/assets/en_flag_bw.svg';
 import frFlag from '/src/assets/fr_flag.svg';
 import enFlag from '/src/assets/en_flag.svg';
+import useResponsive from "../../hooks/useResponsive";
 
 export default function Footer() {
   const { currentLanguage, changeLanguage } = useContext(LanguageContext);
   const [isHoveredEn, setIsHoveredEn] = useState(false);
   const [isHoveredFr, setIsHoveredFr] = useState(true);
+  const isDesktop = useResponsive('up', 'sm');
 
   const getFlagSrc = (language : string, isHovered : boolean) => {
     if (language === 'fr') {
@@ -20,6 +22,7 @@ export default function Footer() {
 
   return (
     <Stack flexWrap="wrap" direction="row" position="absolute" bottom="5%" right="3%" justifyContent="center">
+    {isDesktop &&(
       <Stack direction="row" alignItems="center" justifyContent="center" mt={2}>
         <Stack>
           <Box
@@ -55,6 +58,8 @@ export default function Footer() {
           />
         </Stack>
       </Stack>
+    )
+  }
     </Stack>
   );
 }

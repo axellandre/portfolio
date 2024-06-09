@@ -66,8 +66,8 @@ export default function DesktopHeader({ t }: { t: TFunction }) {
             <Link
               key={menuItem.path}
               to={menuItem.path}
-              className={`nav-item ${menuItem.path === '/blog' || menuItem.path === '/projects' ? 'disabled' : ''}`}
-              style={{ pointerEvents: menuItem.path === '/blog' || menuItem.path === '/projects' ? 'none' : 'auto', color: menuItem.path === '/blog' || menuItem.path === '/projects' ? '#999' : palette.primary }}
+              className={`nav-item ${menuItem.path === '/blog' ? 'disabled' : ''}`}
+              style={{ pointerEvents: menuItem.path === '/blog' ? 'none' : 'auto', color: menuItem.path === '/blog' ? '#999' : palette.primary }}
             >
               <Typography
                 variant="h6"

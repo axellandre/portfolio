@@ -1,12 +1,10 @@
 import { Typography, Grid, Container, Stack, Divider, Box } from '@mui/material';
 import { useTranslation } from 'react-i18next';
 import palette from '../theme/theme';
-import useResponsive from '../hooks/useResponsive';
 import '../theme/highlight.css';
 
 export default function AboutPage() {
   const { t } = useTranslation();
-  const isDesktop = useResponsive('up', 'sm');
 
   return (
     <Container
@@ -17,7 +15,7 @@ export default function AboutPage() {
       }}
     >
       <Grid container spacing={3}>
-        <Grid item xs={12}>
+        <Grid item xs={12} mt={1}>
           <Stack>
             <Typography
               variant="h4"
@@ -40,12 +38,13 @@ export default function AboutPage() {
                 }}
               />
             </Stack>
+            
             <Box
               component="img"
               loading="lazy"
               sx={{
-                maxHeight: { xs: 100, md: 50 },
-                maxWidth: { xs: 100, md: 50 },
+                maxHeight: { xs: 70, md: 50, sm: 30 },
+                maxWidth: { xs: 70, md: 50, sm: 30 },
                 color: palette.primary,
                 mt: 4,
               }}
@@ -58,6 +57,7 @@ export default function AboutPage() {
                 fontWeight: 700,
                 lineHeight: 'normal',
                 color: palette.primary,
+                fontSize: { xs: '1.5em', sm: '1.5rem', md: '2.5rem' },
               }}
               dangerouslySetInnerHTML={{ __html: t('about.description') }}
             />
@@ -66,28 +66,19 @@ export default function AboutPage() {
             component="img"
             loading="lazy"
             sx={{
-              maxHeight: { xs: 100, md: 50 },
-              maxWidth: { xs: 100, md: 50 },
+              maxHeight: { xs: 70, md: 50, sm: 30 },
+              maxWidth: { xs: 70, md: 50, sm: 30 },
               color: palette.primary,
               transform: 'scaleX(-1)',
               marginLeft: 'auto',
               marginRight: 0,
-              display: "flex"
+              display: 'flex',
             }}
             src="/src/assets/quote_mark.svg"
           />
+
+
         </Grid>
-        {!isDesktop && (
-          <Stack margin="auto" my={2}>
-            <Divider
-              sx={{
-                width: '20vw',
-                color: palette.primary,
-                border: '2px solid',
-              }}
-            />
-          </Stack>
-        )}
       </Grid>
     </Container>
   );
