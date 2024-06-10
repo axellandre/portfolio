@@ -4,23 +4,21 @@ import {
   Drawer,
   Grid,
   IconButton,
-  Link,
   List,
-  ListItem,
-  ListItemButton,
   ListItemIcon,
-  ListItemText,
   Menu,
   MenuItem,
   Stack,
   Tooltip,
   Typography,
 } from '@mui/material';
-import { TFunction} from 'i18next';
+import { TFunction, changeLanguage} from 'i18next';
 import palette from '../../theme/theme';
 import { Fragment, useState } from 'react';
 import CloseIcon from '@mui/icons-material/Close';
 import React from 'react';
+import { HashLink as Link } from 'react-router-hash-link';
+import { menuItems } from '../../routes/paths';
 
 type Anchor = 'left';
 
@@ -33,9 +31,11 @@ export default function MobileHeader({ t }: { t: TFunction }) {
   const handleClick = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorEl(event.currentTarget);
   };
-  const handleClose = () => {
-    setAnchorEl(null);
-  };
+
+  const handleClose = (language: string) => {
+  changeLanguage(language); 
+  setAnchorEl(null);
+};
 
   const toggleDrawer =
     (anchor: Anchor, open: boolean) =>
@@ -50,7 +50,6 @@ export default function MobileHeader({ t }: { t: TFunction }) {
 
       setState({ ...state, [anchor]: open });
     };
-
 
   const list = (anchor: Anchor) => (
     <Box
@@ -79,27 +78,26 @@ export default function MobileHeader({ t }: { t: TFunction }) {
           border: '1px solid',
         }}
       />
-      <List>
-        {[
-          <Typography variant="h5" fontWeight="400">
-            {t('menu.home')}
-          </Typography>,
-          <Typography variant="h5" fontWeight="400">
-            {t('menu.about')}
-          </Typography>,
-          <Typography variant="h5" fontWeight="400">
-            {t('menu.projects')}
-          </Typography>,
-          <Typography variant="h5" fontWeight="400">
-            {t('menu.blog')}
-          </Typography>,
-        ].map((text) => (
-          <ListItem disablePadding>
-            <ListItemButton>
-              <ListItemText primary={text} />
-            </ListItemButton>
-          </ListItem>
-        ))}
+      <List sx={{ml: 2, mt: 2}}>
+        {menuItems.map((menuItem) => (
+     <Link
+            key={menuItem.path}
+            to={menuItem.path}
+            className={`nav-item ${menuItem.path === '/blog' ? 'disabled' : ''}`}
+            style={{
+              pointerEvents: menuItem.path === '/blog' ? 'none' : 'auto',
+              color: menuItem.path === '/blog' ? '#999' : palette.white,
+                  }}
+          >
+              <Typography
+                variant="h5" 
+                fontWeight="400"
+                sx={{ color : menuItem.path === '/blog' ? '#999' : palette.white, mb: 3 }}
+              >
+                {t(menuItem.translationKey)}
+              </Typography>
+            </Link>
+          ))}
       </List>
     </Box>
   );
@@ -132,7 +130,7 @@ export default function MobileHeader({ t }: { t: TFunction }) {
           ))}
         </Grid>
         <Grid item xs={6}>
-          <Link href="/home">
+          <Link to="/home">
             <Box
               component="img"
               loading='lazy'
@@ -154,7 +152,7 @@ export default function MobileHeader({ t }: { t: TFunction }) {
                 textAlign: 'center',
               }}
             >
-              <Tooltip title="Account settings">
+              <Tooltip title={t('account.language')}>
                 <IconButton
                   onClick={handleClick}
                   size="large"
@@ -176,8 +174,7 @@ export default function MobileHeader({ t }: { t: TFunction }) {
               anchorEl={anchorEl}
               id="account-menu"
               open={open}
-              onClose={handleClose}
-              onClick={handleClose}
+              onClose={() => setAnchorEl(null)} 
               PaperProps={{
                 elevation: 0,
                 sx: {
@@ -205,7 +202,7 @@ export default function MobileHeader({ t }: { t: TFunction }) {
               transformOrigin={{ horizontal: 'right', vertical: 'top' }}
               anchorOrigin={{ horizontal: 'right', vertical: 'bottom' }}
             >
-              <MenuItem onClick={handleClose}>
+                <MenuItem onClick={() => handleClose('fr')}>
                 <Stack direction="row" spacing={2} alignItems="center">
                   <ListItemIcon>
                     <Box
@@ -232,7 +229,7 @@ export default function MobileHeader({ t }: { t: TFunction }) {
                   </Typography>
                 </Stack>
               </MenuItem>
-              <MenuItem onClick={handleClose}>
+              <MenuItem onClick={() => handleClose('en')}>
                 <Stack direction="row" spacing={2} alignItems="center">
                   <ListItemIcon>
                     <Box

@@ -31,7 +31,11 @@ const en = {
     verifySyntax: "Check your spelling."
   },
   projects: {
+    label: "Projects",
     comingSoon: "Coming soon..."
+  },
+  account:{
+    language: "Change language"
   }
 };
 

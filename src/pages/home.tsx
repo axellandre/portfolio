@@ -18,7 +18,7 @@ export default function HomePage() {
       alignItems="center"
       sx={{ marginTop: { xs: '5vh', sm: '25vh' } }}
     >
-      <Grid item xs={12} sm={2}>
+      <Grid item xs={12} sm={2} zIndex={1}>
         <Stack direction="column">
           <Stack textAlign={{ xs: 'center', sm: 'initial' }}>
             <Stack ml={{ sm: 10 }}>
@@ -140,7 +140,7 @@ export default function HomePage() {
               {t('home.introduction')}
             </Typography>
           </Stack>
-          <Stack direction="row" justifyContent={{ xs: 'center', sm: 'initial' }} width="20px">
+          <Stack direction="row" justifyContent={{ xs: 'center', sm: 'initial' }} width={{sm:"20px"}}>
             <Typography
               variant={isDesktop ? 'h4' : 'h5'}
               sx={{

@@ -38,7 +38,11 @@ const fr = {
     description: "Je suis <span class='highlight'>développeur fullstack JS/TS</span> passionné par la création d'interfaces graphiques dynamiques et ergonomiques. Mon expertise approfondie dans les technologies modernes telles que <span class='highlight'>React</span>, <span class='highlight'>Next et Nest</span> me permet de concevoir des interfaces utilisateur intuitives et réactives.",
     },
   projects: {
+        label: "Projets",
     comingSoon: "Bientôt disponible..."
+  },
+    account:{
+    language: "Changer la langue"
   }
 };
 

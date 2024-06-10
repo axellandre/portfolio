@@ -15,7 +15,7 @@ export default function AboutPage() {
       }}
     >
       <Grid container spacing={3}>
-        <Grid item xs={12} mt={1}>
+        <Grid item xs={12} mt={8}>
           <Stack>
             <Typography
               variant="h4"

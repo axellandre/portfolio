@@ -8,7 +8,7 @@ import palette from '../../theme/theme';
 
 function Media() {
   return (
-    <Card sx={{ width: 400, height: 400, m: 2, borderRadius: '5%'}}>
+    <Card sx={{ width: 350, height: 350, m: 2, borderRadius: '5%'}}>
       <Stack sx={{ backgroundColor: palette.shadow }}>
         <CardHeader
           avatar={<Skeleton animation="wave" variant="circular" width={40} height={40} />}
@@ -17,7 +17,7 @@ function Media() {
         />
       </Stack>
       <Stack sx={{ backgroundColor: palette.shadow, opacity: 1 }}>
-        <Skeleton sx={{ height: 270 }} animation="wave" variant="rectangular" />
+        <Skeleton sx={{ height: 220 }} animation="wave" variant="rectangular" />
       </Stack>
       <Stack sx={{ backgroundColor: palette.shadow }}>
         <CardContent>
