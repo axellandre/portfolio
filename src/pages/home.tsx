@@ -7,7 +7,7 @@ import useResponsive from '../hooks/useResponsive';
 import { useTranslation } from 'react-i18next';
 
 export default function HomePage() {
-  const isDesktop = useResponsive('up', 'sm');
+  const isDesktop = useResponsive('up', 'lg'); 
   const { t } = useTranslation();
 
   return (
@@ -16,12 +16,12 @@ export default function HomePage() {
       spacing={2}
       justifyContent="center"
       alignItems="center"
-      sx={{ marginTop: { xs: '5vh', sm: '25vh' } }}
+      sx={{ marginTop: { xs: '5vh', sm: '5vh', md: '5vh', lg: '25vh' } }}
     >
-      <Grid item xs={12} sm={2} zIndex={1}>
+      <Grid item xs={12} lg={2} zIndex={1}>
         <Stack direction="column">
-          <Stack textAlign={{ xs: 'center', sm: 'initial' }}>
-            <Stack ml={{ sm: 10 }}>
+          <Stack textAlign={{ xs: 'center', lg: 'initial' }}>
+            <Stack ml={{ lg: 10 }}>
               <Typography
                 variant={isDesktop ? 'h4' : 'h5'}
                 sx={{
@@ -33,7 +33,7 @@ export default function HomePage() {
               >
                 {t('home.lastName')}
               </Typography>
-              <Stack direction="row" justifyContent={{ xs: 'center', sm: 'initial' }}>
+              <Stack direction="row" justifyContent={{ xs: 'center', lg: 'initial' }}>
                 <Typography
                   variant={isDesktop ? 'h4' : 'h5'}
                   sx={{
@@ -63,11 +63,11 @@ export default function HomePage() {
                   color: palette.secondary,
                   width: '50px',
                   my: 2,
-                  mx: { xs: 'auto', sm: 0 }
+                  mx: { xs: 'auto', lg: 0 }
                 }}
               ></Stack>
                 {isDesktop && 
-              <Stack width="fit-content" alignItems="center" mx={{ xs: 'auto', sm: 0 }}                  
+              <Stack width="fit-content" alignItems="center" mx={{ xs: 'auto', lg: 0 }}                  
                  zIndex={1}>
                 <Link
                   href="mailto:a.landre@proxiad.com"
@@ -105,26 +105,27 @@ export default function HomePage() {
           </Stack>
         </Stack>
       </Grid>
-      <Grid item xs={12} sm={7} zIndex={0}>
+      <Grid item xs={12} lg={7} zIndex={0}>
         <Box
           component="img"
           alt="character"
           src="/src/assets/character.svg"
           loading="lazy"
           sx={{
-            width: { xs: '80%', sm: '100%' },
+            width: { xs: '80%', sm: '55%', md: '100%', lg: '100%' },
             height: 'auto',
             maxWidth: '100%',
-            maxHeight: { xs: '80%', sm: '95%' },
+            maxHeight: '80%',
             mx: 'auto',
-            position: { sm: 'absolute' },
-            top: { sm: 50 },
-            right: { sm: 50 },
+            position: { lg: 'absolute' },
+            top: { lg: 50 },
+            right: { lg: 50 },
+            transform: { xs: 'translate(-22px, 10px)' }
           }}
         />
       </Grid>
-      <Grid item xs={12} sm={3}>
-        <Stack textAlign={{ xs: 'center', sm: 'initial' }}>
+      <Grid item xs={12} lg={3}>
+        <Stack textAlign={{ xs: 'center', lg: 'initial' }}>
           <Stack>
             <Typography
               variant="body1"
@@ -140,7 +141,7 @@ export default function HomePage() {
               {t('home.introduction')}
             </Typography>
           </Stack>
-          <Stack direction="row" justifyContent={{ xs: 'center', sm: 'initial' }} width={{sm:"20px"}}>
+          <Stack direction="row" justifyContent={{ xs: 'center', lg: 'initial' }} width={{ lg: "20px" }}>
             <Typography
               variant={isDesktop ? 'h4' : 'h5'}
               sx={{
@@ -159,7 +160,7 @@ export default function HomePage() {
             sx={{ textDecorationLine: 'none', color: palette.secondary }}
             zIndex={1}
           >
-            <Stack direction="row" alignItems="center" justifyContent={{ xs: 'center', sm: 'initial' }}>
+            <Stack direction="row" alignItems="center" justifyContent={{ xs: 'center', lg: 'initial' }}>
               <Typography
                 variant="body2"
                 sx={{

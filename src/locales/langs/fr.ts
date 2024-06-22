@@ -35,7 +35,7 @@ const fr = {
     design: 'UI/UX Design',
     development: 'Développement web',
     analysis: 'Analyses & recherches',
-    description: "Je suis <span class='highlight'>développeur fullstack JS/TS</span> passionné par la création d'interfaces graphiques dynamiques et ergonomiques. Mon expertise approfondie dans les technologies modernes telles que <span class='highlight'>React</span>, <span class='highlight'>Next et Nest</span> me permet de concevoir des interfaces utilisateur intuitives et réactives.",
+    description: "Je suis <span class='highlight'>développeur fullstack JS/TS</span> avec une passion pour la création d'interfaces graphiques dynamiques et ergonomiques.En tant que développeur junior, j'ai acquis de l'expérience professionnelle avec <span class='highlight'> React et Next.js</span>, et j'utilise également <span class='highlight'>TypeScript</span>. En outre, je travaille sur des projets en utilisant <span class='highlight'> Nest.js.</span>",
     },
   projects: {
         label: "Projets",

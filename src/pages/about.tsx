@@ -32,7 +32,7 @@ export default function AboutPage() {
             <Stack m={'auto'}>
               <Divider
                 sx={{
-                  width: '5vw',
+                  width: '10vw',
                   color: palette.secondary,
                   border: '2px solid',
                 }}
@@ -43,8 +43,8 @@ export default function AboutPage() {
               component="img"
               loading="lazy"
               sx={{
-                maxHeight: { xs: 70, md: 50, sm: 30 },
-                maxWidth: { xs: 70, md: 50, sm: 30 },
+                maxHeight: { xs: 70, md: 50, sm: 60 },
+                maxWidth: { xs: 70, md: 50, sm: 60 },
                 color: palette.primary,
                 mt: 4,
               }}
@@ -57,7 +57,7 @@ export default function AboutPage() {
                 fontWeight: 700,
                 lineHeight: 'normal',
                 color: palette.primary,
-                fontSize: { xs: '1.5em', sm: '1.5rem', md: '2.5rem' },
+                fontSize: { xs: '1.5em', sm: '2rem', md: '2.5rem' },
               }}
               dangerouslySetInnerHTML={{ __html: t('about.description') }}
             />
@@ -66,8 +66,8 @@ export default function AboutPage() {
             component="img"
             loading="lazy"
             sx={{
-              maxHeight: { xs: 70, md: 50, sm: 30 },
-              maxWidth: { xs: 70, md: 50, sm: 30 },
+              maxHeight: { xs: 70, md: 50, sm: 60 },
+              maxWidth: { xs: 70, md: 50, sm: 60 },
               color: palette.primary,
               transform: 'scaleX(-1)',
               marginLeft: 'auto',

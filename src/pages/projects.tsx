@@ -2,34 +2,10 @@ import { Grid, Stack, Typography, Container, Divider } from "@mui/material";
 import SkeletonCard from "../components/about/SkeletonCard";
 import palette from "../theme/theme";
 import { useTranslation } from "react-i18next";
-import HourglassTopIcon from '@mui/icons-material/HourglassTop';
-import HourglassBottomIcon from '@mui/icons-material/HourglassBottom';
-import { keyframes } from '@mui/system';
-import { useState, useEffect } from 'react';
-
-const rotate = keyframes`
-  0% {
-    transform: rotate(0deg);
-  }
-  50% {
-    transform: rotate(180deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  } 
-`;
 
 export default function ProjectsPage() {
     const { t } = useTranslation();
-    const skeletonCards = [1, 2, 3];
-    const [isTop, setIsTop] = useState(true); 
-
-    useEffect(() => {
-        const interval = setInterval(() => {
-            setIsTop((prev) => !prev); 
-        }, 2000); 
-        return () => clearInterval(interval);
-    }, []);
+    const skeletonCards = [1];
 
     return (
         <Container
@@ -39,8 +15,8 @@ export default function ProjectsPage() {
                 position: 'relative',
             }}
         >
-            <Grid container spacing={3}>
-                <Grid item xs={12} mt={8}>
+            <Grid container>
+                <Grid item xs={12}>
                     <Stack>
                         <Typography
                             variant="h4"
@@ -57,13 +33,13 @@ export default function ProjectsPage() {
                         <Stack m={'auto'}>
                             <Divider
                                 sx={{
-                                    width: '5vw',
+                                    width: '10vw',
                                     color: palette.secondary,
                                     border: '2px solid',
                                 }}
                             />
                         </Stack>
-                        <Stack direction="row" justifyContent="center" alignItems="center" mt={4}>
+                        <Stack direction="row" justifyContent="center" alignItems="center" mt={{xs: 10}} pl={{ xs: "35px"}}>
                             <Grid container spacing={2} justifyContent="center" alignItems="center">
                                 {skeletonCards.map((_, index) => (
                                     <Grid item key={index} xs={12} sm={6} md={4}>
@@ -72,7 +48,7 @@ export default function ProjectsPage() {
                                 ))}
                             </Grid>
                         </Stack>
-                        <Stack direction="row" justifyContent="center" alignItems="center" mt={6}>
+                        <Stack direction="row" justifyContent="center">
                             <Typography
                                 variant="h4"
                                 sx={{
@@ -85,26 +61,7 @@ export default function ProjectsPage() {
                                     alignItems: 'center',
                                 }}
                             >
-                                {t('projects.comingSoon')}
-                                {isTop ? (
-                                    <HourglassTopIcon
-                                        sx={{
-                                            ml: 1,
-                                            width: 34,
-                                            height: 34,
-                                            animation: `${rotate} 2s linear`,
-                                        }}
-                                    />
-                                ) : (
-                                    <HourglassBottomIcon
-                                        sx={{
-                                            ml: 1,
-                                            width: 34,
-                                            height: 34,
-                                            animation: `${rotate} 2s linear`,
-                                        }}
-                                    />
-                                )}
+                               
                             </Typography>
                         </Stack>
                     </Stack>
