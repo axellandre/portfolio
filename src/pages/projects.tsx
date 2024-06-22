@@ -2,10 +2,15 @@ import { Grid, Stack, Typography, Container, Divider } from "@mui/material";
 import SkeletonCard from "../components/about/SkeletonCard";
 import palette from "../theme/theme";
 import { useTranslation } from "react-i18next";
+import { useEffect } from "react";
 
 export default function ProjectsPage() {
     const { t } = useTranslation();
     const skeletonCards = [1];
+
+   useEffect(() => {
+        document.title = `${t('menu.projects')}`;
+    }, [t]);
 
     return (
         <Container

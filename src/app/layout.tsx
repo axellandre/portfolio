@@ -1,4 +1,3 @@
-import { AppRouterCacheProvider } from '@mui/material-nextjs/v13-appRouter';
 import React, { ReactNode } from 'react';
 
 interface RootLayoutProps {
@@ -16,9 +15,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
         <meta name="description" content="My App is a..." />
       </head>
       <body>
-        <AppRouterCacheProvider>
           {children}
-        </AppRouterCacheProvider>
       </body>
     </html>
   );

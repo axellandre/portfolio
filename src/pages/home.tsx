@@ -5,11 +5,16 @@ import palette from '../theme/theme';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import useResponsive from '../hooks/useResponsive';
 import { useTranslation } from 'react-i18next';
+import { useEffect } from 'react';
 
 export default function HomePage() {
   const isDesktop = useResponsive('up', 'lg'); 
   const { t } = useTranslation();
 
+    useEffect(() => {
+        document.title = `${t('menu.home')}`;
+    }, [t]);
+    
   return (
     <Grid
       container
@@ -112,7 +117,7 @@ export default function HomePage() {
           src="/src/assets/character.svg"
           loading="lazy"
           sx={{
-            width: { xs: '80%', sm: '55%', md: '100%', lg: '100%' },
+            width: { xs: '80%', sm: '55%', md: '40%', lg: '100{%' },
             height: 'auto',
             maxWidth: '100%',
             maxHeight: '80%',

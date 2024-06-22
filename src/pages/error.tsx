@@ -2,11 +2,16 @@ import { Box, Typography, Stack } from "@mui/material";
 import palette from "../theme/theme";
 import useResponsive from "../hooks/useResponsive";
 import { useTranslation } from "react-i18next";
+import { useEffect } from "react";
 
 export default function ErrorPage() {
   const isDesktop = useResponsive("up", "sm");
     const { t } = useTranslation();
 
+  useEffect(() => {
+        document.title = `${t('home.error')}`;
+    }, [t]);
+    
   if (isDesktop) {
     return (
       <Box

@@ -14,7 +14,7 @@ export default function DesktopHeader({ t }: { t: TFunction }) {
       <Grid
         container
         direction="row"
-        spacing={3}
+        spacing={1}
         justifyContent="space-between"
         mt={1}
       >
@@ -52,7 +52,7 @@ export default function DesktopHeader({ t }: { t: TFunction }) {
                   backgroundColor: palette.primary,
                   visibility: 'hidden',
                   transform: 'scaleX(0)',
-                  transformOrigin: ' top left',
+                  transformOrigin: 'top left',
                   transition: 'transform 0.2s ease',
                 },
                 '&:hover:before': {
@@ -83,7 +83,7 @@ export default function DesktopHeader({ t }: { t: TFunction }) {
           <Grid item xs={2}>
             <Stack
               direction="row"
-              gap={3}
+              gap={{ md: 2, lg: 4 }}
               justifyContent="center"
               sx={{
                 borderLeft: `3px solid`,

@@ -2,9 +2,14 @@ import { Typography, Grid, Container, Stack, Divider, Box } from '@mui/material'
 import { useTranslation } from 'react-i18next';
 import palette from '../theme/theme';
 import '../theme/highlight.css';
+import { useEffect } from 'react';
 
 export default function AboutPage() {
   const { t } = useTranslation();
+
+  useEffect(() => {
+        document.title = `${t('menu.about')}`;
+    }, [t]);
 
   return (
     <Container
