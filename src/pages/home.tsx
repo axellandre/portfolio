@@ -117,7 +117,7 @@ export default function HomePage() {
           src="/src/assets/character.svg"
           loading="lazy"
           sx={{
-            width: { xs: '80%', sm: '55%', md: '40%', lg: '100{%' },
+            width: { xs: '80%', sm: '55%', md: '40%', lg: '100%' },
             height: 'auto',
             maxWidth: '100%',
             maxHeight: '80%',

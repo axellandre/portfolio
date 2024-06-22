@@ -1,3 +1,4 @@
+import React from 'react';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import { I18nextProvider } from 'react-i18next'; 
 import i18n from './locales/i18n'; 
@@ -10,11 +11,10 @@ import { LanguageProvider } from './layouts/context/LanguageProvider';
 import ProjectsPage from './pages/projects';
 
 export default function App() {
-  const router = createBrowserRouter([
+  const routerConfig = [
     {
       path: '/',
       element: <Layout />,
-      errorElement: <ErrorPage />,
       children: [
         {
           path: 'home',
@@ -24,7 +24,7 @@ export default function App() {
           path: 'about',
           element: <AboutPage />,
         },
-                {
+        {
           path: 'projects',
           element: <ProjectsPage />,
         },
@@ -32,15 +32,21 @@ export default function App() {
           path: '*',
           element: <ErrorPage />,
         },
+               {
+          path: '/',
+          element: <HomePage />,
+        }
       ],
     },
-  ]);
+  ];
+
+  const router = createBrowserRouter(routerConfig);
 
   return (
     <LanguageProvider>
-    <I18nextProvider i18n={i18n}> 
-      <RouterProvider router={router} />
-    </I18nextProvider>
+      <I18nextProvider i18n={i18n}> 
+        <RouterProvider router={router} />
+      </I18nextProvider>
     </LanguageProvider>
   );
 }
