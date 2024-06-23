@@ -9,6 +9,7 @@ const en = {
     contact: 'Contact',
     fr: 'fr',
     en: 'en',
+    error: '404 Not Found',
   },
   home: {
     lastName: 'Axel',

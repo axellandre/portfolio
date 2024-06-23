@@ -9,7 +9,7 @@ export default function ErrorPage() {
     const { t } = useTranslation();
 
   useEffect(() => {
-        document.title = `${t('home.error')}`;
+        document.title = `${t('menu.error')}`;
     }, [t]);
     
   if (isDesktop) {

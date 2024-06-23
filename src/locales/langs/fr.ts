@@ -7,6 +7,7 @@ const fr = {
     blog: 'Blog',
     contact: 'Contact',
     label: 'Menu',
+    error: 'Erreur 404',
     fr: 'fr',
     en: 'en',
   },
