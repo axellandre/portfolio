@@ -21,7 +21,7 @@ const en = {
     moreInformations: 'More informations',
   },
   about: {
-description: "I am a <span class='highlight'>fullstack JS/TS developer</span> with a passion for creating dynamic and ergonomic user interfaces. As a junior developer, I have gained professional experience with <span class='highlight'>React and Next.js</span>, and I also use <span class='highlight'>TypeScript</span>. Additionally, I work on side projects using <span class='highlight'>Nest.js</span>."
+description: "I am a <span class='highlight'>fullstack JS/TS developer</span> with a passion for creating dynamic and ergonomic user interfaces. As a junior developer, I have gained professional experience with <span class='highlight'>React and Next.js</span>, and I also use <span class='highlight'>TypeScript</span>. Additionally, I work on fullstack side projects using <span class='highlight'>Nest.js</span> for backend."
   },
   error: {
     four: "4",
