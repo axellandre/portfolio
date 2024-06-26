@@ -1,4 +1,3 @@
-// src/layouts/header/Header.js
 import { useTranslation } from 'react-i18next';
 import MobileHeader from './MobileHeader';
 import DesktopHeader from './DesktopHeader';

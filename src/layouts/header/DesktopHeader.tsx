@@ -5,6 +5,10 @@ import palette from '../../theme/theme';
 import { HashLink as Link } from 'react-router-hash-link';
 import useResponsive from '../../hooks/useResponsive';
 import { TFunction } from 'i18next';
+import logoAcronym from '../../assets/logo_acronym.svg';
+import logoMail from '../../assets/mail.svg';
+import logoLinkedin from '../../assets/linkedin.svg';
+import logoGithub from '../../assets/github.svg';
 
 export default function DesktopHeader({ t }: { t: TFunction }) {
   const isDesktop = useResponsive('up', 'md');
@@ -28,7 +32,7 @@ export default function DesktopHeader({ t }: { t: TFunction }) {
                 maxWidth: { xs: 50, md: 50 },
               }}
               alt=""
-              src="/src/assets/logo_acronym.svg"
+              src={logoAcronym}
             />
           </Link>
         </Grid>
@@ -96,7 +100,7 @@ export default function DesktopHeader({ t }: { t: TFunction }) {
                   width="30px"
                   loading='lazy'
                   alt="mail"
-                  src="/src/assets/mail.svg"
+                  src={logoMail}
                 />
               </Link>
               <Link
@@ -109,7 +113,7 @@ export default function DesktopHeader({ t }: { t: TFunction }) {
                   width="30px"
                   alt="linkedin"
                   loading='lazy'
-                  src="/src/assets/linkedin.svg"
+                  src={logoLinkedin}
                 />
               </Link>
               <Link target="_blank" to="https://github.com/axellandre">
@@ -118,7 +122,7 @@ export default function DesktopHeader({ t }: { t: TFunction }) {
                   loading='lazy'
                   width="30px"
                   alt="github"
-                  src="/src/assets/github.svg"
+                  src={logoGithub}
                 />
               </Link>
             </Stack>

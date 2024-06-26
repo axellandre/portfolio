@@ -6,6 +6,7 @@ import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import useResponsive from '../hooks/useResponsive';
 import { useTranslation } from 'react-i18next';
 import { useEffect } from 'react';
+import characterPicture from '../assets/character.svg';
 
 export default function HomePage() {
   const isDesktop = useResponsive('up', 'lg'); 
@@ -114,7 +115,7 @@ export default function HomePage() {
         <Box
           component="img"
           alt="character"
-          src="/src/assets/character.svg"
+          src={characterPicture}
           loading="lazy"
           sx={{
             width: { xs: '80%', sm: '55%', md: '40%', lg: '100%' },

@@ -1,10 +1,10 @@
 import { Stack, Box, Divider } from "@mui/material";
 import { useState, useContext } from 'react';
 import { LanguageContext } from '../../layouts/context/LanguageProvider';
-import frFlagBW from '/src/assets/fr_flag_bw.svg';
-import enFlagBW from '/src/assets/en_flag_bw.svg';
-import frFlag from '/src/assets/fr_flag.svg';
-import enFlag from '/src/assets/en_flag.svg';
+import frFlagBW from '../../assets/fr_flag_bw.svg';
+import enFlagBW from '../../assets/en_flag_bw.svg';
+import frFlag from '../..//assets/fr_flag.svg';
+import enFlag from '../../assets/en_flag.svg';
 import useResponsive from "../../hooks/useResponsive";
 
 export default function Footer() {

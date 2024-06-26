@@ -19,6 +19,11 @@ import CloseIcon from '@mui/icons-material/Close';
 import React from 'react';
 import { HashLink as Link } from 'react-router-hash-link';
 import { menuItems } from '../../routes/paths';
+import logoMenu from '../../assets/menu.svg';
+import logoAcronym from '../../assets/logo_acronym.svg';
+import language from '../../assets/languages.svg';
+import frFlag from '../../assets/fr_flag.svg';
+import enFlag from '../../assets/en_flag.svg';
 
 type Anchor = 'left';
 
@@ -116,7 +121,7 @@ export default function MobileHeader({ t }: { t: TFunction }) {
                   component="img"
                   alt="character"
                   loading='lazy'
-                  src="/src/assets/menu.svg"
+                  src={logoMenu}
                 />
               </IconButton>
               <Drawer
@@ -139,7 +144,7 @@ export default function MobileHeader({ t }: { t: TFunction }) {
                 mt: 1,
               }}
               alt=""
-              src="/src/assets/logo_acronym.svg"
+              src={logoAcronym}
             />
           </Link>
         </Grid>
@@ -164,7 +169,7 @@ export default function MobileHeader({ t }: { t: TFunction }) {
                     component="img"
                     alt="character"
                     loading='lazy'
-                    src="/src/assets/languages.svg"
+                    src={language}
                     sx={{ ml: 3 }}
                   />
                 </IconButton>
@@ -209,7 +214,7 @@ export default function MobileHeader({ t }: { t: TFunction }) {
                       component="img"
                       alt="fr_flag"
                       loading='lazy'
-                      src="/src/assets/fr_flag.svg"
+                      src={frFlag}
                       sx={{
                         filter: 'drop-shadow(0px 2px 4px rgba(0,0,0,0.32))',
                       }}
@@ -235,7 +240,7 @@ export default function MobileHeader({ t }: { t: TFunction }) {
                     <Box
                       component="img"
                       alt="en_flag"
-                      src="/src/assets/en_flag.svg"
+                      src={enFlag}
                       loading='lazy'
 
                       sx={{

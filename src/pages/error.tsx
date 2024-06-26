@@ -3,6 +3,7 @@ import palette from "../theme/theme";
 import useResponsive from "../hooks/useResponsive";
 import { useTranslation } from "react-i18next";
 import { useEffect } from "react";
+import logoError from '../assets/logo_error.svg';
 
 export default function ErrorPage() {
   const isDesktop = useResponsive("up", "sm");
@@ -25,7 +26,7 @@ export default function ErrorPage() {
           <Box
             component="img"
             alt="character"
-            src="/src/assets/logo_error.svg"
+            src={logoError}
             loading='lazy'
             sx={{
               width: "40vh",
@@ -136,7 +137,7 @@ export default function ErrorPage() {
       <Box
         component="img"
         alt="character"
-        src="/src/assets/logo_error.svg"
+        src="/assets/logo_error.svg"
         loading='lazy'
         sx={{
           width: "40vh",

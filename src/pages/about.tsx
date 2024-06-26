@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 import palette from '../theme/theme';
 import '../theme/highlight.css';
 import { useEffect } from 'react';
+import quoteMark from '../assets/quote_mark.svg';
 
 export default function AboutPage() {
   const { t } = useTranslation();
@@ -53,7 +54,7 @@ export default function AboutPage() {
                 color: palette.primary,
                 mt: 4,
               }}
-              src="/src/assets/quote_mark.svg"
+              src={quoteMark}
             />
             <Typography
               variant="h4"
@@ -79,7 +80,7 @@ export default function AboutPage() {
               marginRight: 0,
               display: 'flex',
             }}
-            src="/src/assets/quote_mark.svg"
+            src={quoteMark}
           />
 
 
