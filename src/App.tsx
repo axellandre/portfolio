@@ -1,5 +1,5 @@
 import React from 'react';
-import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+import { RouterProvider, createHashRouter } from 'react-router-dom';
 import { I18nextProvider } from 'react-i18next'; 
 import i18n from './locales/i18n'; 
 import './App.css';
@@ -40,7 +40,7 @@ export default function App() {
     },
   ];
 
-  const router = createBrowserRouter(routerConfig);
+  const router = createHashRouter(routerConfig);
 
   return (
     <LanguageProvider>
