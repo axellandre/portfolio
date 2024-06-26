@@ -162,7 +162,7 @@ export default function HomePage() {
             </Typography>
           </Stack>
           <Link
-            href="portfolio/about"
+            href="/about"
             sx={{ textDecorationLine: 'none', color: palette.secondary }}
             zIndex={1}
           >
