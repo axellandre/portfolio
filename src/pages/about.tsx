@@ -15,7 +15,7 @@ export default function AboutPage() {
   return (
     <Container
       sx={{
-        height: '100vh',
+        height: '100dvh',
         overflowY: 'auto',
         position: 'relative',
       }}
