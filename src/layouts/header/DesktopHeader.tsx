@@ -94,7 +94,7 @@ export default function DesktopHeader({ t }: { t: TFunction }) {
                 color: palette.primary,
               }}
             >
-              <Link smooth target="_blank" to={'mailto:a.landre@net.estia.com'}>
+              <Link smooth target="_blank" to={'mailto:a.landre@net.estia.fr'}>
                 <Box
                   component="img"
                   width="30px"

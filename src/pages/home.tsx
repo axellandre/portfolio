@@ -76,7 +76,7 @@ export default function HomePage() {
               <Stack width="fit-content" alignItems="center" mx={{ xs: 'auto', lg: 0 }}                  
                  zIndex={1}>
                 <Link
-                  href="mailto:a.landre@net.estia.com"
+                  href="mailto:a.landre@net.estia.fr"
                   sx={{
                     textDecoration: 'none',
                     alignItems: 'center',
