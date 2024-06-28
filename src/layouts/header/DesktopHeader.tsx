@@ -1,7 +1,7 @@
 import { Typography, Grid } from '@mui/material';
 import { Stack, Box } from '@mui/system';
 import { menuItems } from '../../routes/paths';
-import palette from '../../theme/theme';
+import {palette} from '../../theme/theme';
 import { HashLink as Link } from 'react-router-hash-link';
 import useResponsive from '../../hooks/useResponsive';
 import { TFunction } from 'i18next';

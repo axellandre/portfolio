@@ -13,7 +13,7 @@ import {
   Typography,
 } from '@mui/material';
 import { TFunction, changeLanguage} from 'i18next';
-import palette from '../../theme/theme';
+import {palette} from '../../theme/theme';
 import { Fragment, useState } from 'react';
 import CloseIcon from '@mui/icons-material/Close';
 import React from 'react';
