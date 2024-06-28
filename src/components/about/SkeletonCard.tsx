@@ -4,7 +4,7 @@ import CardHeader from '@mui/material/CardHeader';
 import CardContent from '@mui/material/CardContent';
 import Skeleton from '@mui/material/Skeleton';
 import { Stack } from '@mui/system';
-import palette from '../../theme/theme';
+import {palette} from '../../theme/theme';
 import AlarmOnIcon from '@mui/icons-material/AlarmOn';
 import { t } from 'i18next';
 import { Typography } from '@mui/material';
