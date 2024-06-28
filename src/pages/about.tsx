@@ -17,11 +17,10 @@ export default function AboutPage() {
       sx={{
         height: '100dvh',
         overflowY: 'auto',
-        position: 'relative',
       }}
     >
       <Grid container spacing={3}>
-        <Grid item xs={12} mt={8}>
+        <Grid item xs={12}>
           <Stack>
             <Typography
               variant="h4"
