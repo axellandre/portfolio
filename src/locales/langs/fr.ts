@@ -16,7 +16,7 @@ const fr = {
     name: 'Landré',
     contactMe: 'Me contacter',
     introduction: 'Introduction',
-    job: 'Ingénieur études et développements',
+    job: 'Ingénieur étude & développement',
     technologies: 'React.js / Typescript / Next.js',
     moreInformations: "Plus d'informations",
   },

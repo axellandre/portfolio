@@ -16,7 +16,7 @@ const en = {
     name: 'Landré',
     contactMe: 'Contact me',
     introduction: 'Introduction',
-    job: 'Research and development engineer',
+    job: 'Research & development engineer',
     technologies: 'React.js / Typescript / Next.js',
     moreInformations: 'More informations',
   },

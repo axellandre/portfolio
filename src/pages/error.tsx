@@ -20,7 +20,7 @@ export default function ErrorPage() {
         flexDirection="column"
         justifyContent="center"
         alignItems="center"
-        minHeight="100vh"
+        minHeight="100dvh"
       >
         <Stack direction="row" alignItems="center">
           <Box
@@ -132,7 +132,7 @@ export default function ErrorPage() {
       flexDirection="column"
       justifyContent="center"
       alignItems="center"
-      minHeight="100vh"
+      minHeight="100dvh"
     >
       <Box
         component="img"
