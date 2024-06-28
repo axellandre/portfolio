@@ -12,8 +12,8 @@ const fr = {
     en: 'en',
   },
   home: {
-    lastName: 'Axel',
-    name: 'Landré',
+    firstName: 'Axel',
+    lastName: 'Landré',
     contactMe: 'Me contacter',
     introduction: 'Introduction',
     job: 'Ingénieur étude & développement',
@@ -21,8 +21,6 @@ const fr = {
     moreInformations: "Plus d'informations",
   },
   error: {
-    four: '4',
-    zero: '0',
     pageNotFound: "Désolé, la page n'a pas été trouvée !",
     pageNotFoundDescription:
       "Désolé, nous n'avons pas trouvé la page que vous recherchez.",

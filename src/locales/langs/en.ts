@@ -12,8 +12,8 @@ const en = {
     error: '404 Not Found',
   },
   home: {
-    lastName: 'Axel',
-    name: 'Landré',
+    firstName: 'Axel',
+    lastname: 'Landré',
     contactMe: 'Contact me',
     introduction: 'Introduction',
     job: 'Research & development engineer',
@@ -24,8 +24,6 @@ const en = {
 description: "I am a <span class='highlight'>fullstack JS/TS developer</span> with a passion for creating dynamic and ergonomic user interfaces. As a junior developer, I have gained professional experience with <span class='highlight'>React and Next.js</span>, and I also use <span class='highlight'>TypeScript</span>. Additionally, I work on fullstack side projects using <span class='highlight'>Nest.js</span> for backend."
   },
   error: {
-    four: "4",
-    zero: "0",
     pageNotFound: "Sorry, page not found!",
     pageNotFoundDescription: "Sorry, we didn't find the page you were looking for.",
     urlError: "Maybe you mistyped the URL?",

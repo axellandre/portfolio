@@ -1,6 +1,6 @@
 import { Typography, Grid, Container, Stack, Divider, Box } from '@mui/material';
 import { useTranslation } from 'react-i18next';
-import palette from '../theme/theme';
+import {palette} from '../theme/theme';
 import '../theme/highlight.css';
 import { useEffect } from 'react';
 import quoteMark from '../assets/quote_mark.svg';

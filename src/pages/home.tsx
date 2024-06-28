@@ -1,7 +1,7 @@
 import Grid from '@mui/material/Grid';
 import { Box, Stack } from '@mui/system';
 import { Link, Typography } from '@mui/material';
-import palette from '../theme/theme';
+import {palette} from '../theme/theme';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import useResponsive from '../hooks/useResponsive';
 import { useTranslation } from 'react-i18next';
@@ -37,7 +37,7 @@ export default function HomePage() {
                   color: palette.primary,
                 }}
               >
-                {t('home.lastName')}
+                {t('home.firstName')}
               </Typography>
               <Stack direction="row" justifyContent={{ xs: 'center', lg: 'initial' }}>
                 <Typography
@@ -49,7 +49,7 @@ export default function HomePage() {
                     color: palette.primary,
                   }}
                 >
-                  {t('home.name')}
+                  {t('home.lastName')}
                 </Typography>
                 <Typography
                   variant={isDesktop ? 'h4' : 'h5'}

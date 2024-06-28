@@ -6,5 +6,21 @@ const palette = {
   shadow: '#00000040',
 };
 
-export default palette;
-  
+const errorStyles = {
+  largeText: {
+    fontStyle: "normal",
+    fontWeight: 700,
+    lineHeight: "normal",
+    textShadow: `2px 2px 4px ${palette.shadow}, -2px -2px 4px ${palette.shadow}`,
+  },
+  descriptionText: {
+    fontStyle: "normal",
+    fontWeight: 700,
+    lineHeight: "normal",
+    color: palette.primary,
+    textAlign: "center",
+    mb: 1,
+  },
+};
+
+export { palette, errorStyles };
