@@ -1,23 +1,27 @@
-# React + TypeScript + Vite
+# Portfolio Built with React, TypeScript, Vite, Material-UI, and Biome.js
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This portfolio template provides a minimal setup to get started with building a web application using React, TypeScript, Vite, Material-UI, and Biome.js. It includes Hot Module Replacement (HMR) for fast development iteration.
 
-Currently, two official plugins are available:
+## Acknowledgments
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Biome.js**:: https://biome.sh/
 
-## Expanding the ESLint configuration
+## Folder Structure
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- `src/`
+  - `layout/`: Contains layout components used to structure the overall UI of the application.
+  - `routes/`: Defines the routing configuration of the application.
+  - `hooks/`: Contains custom React hooks used throughout the application.
+  - `app/`: Contains the main application component or entry point.
+  - `components/`: Contains reusable UI components used across different pages or features.
+  - `locales/`: Contains localization files for internationalization and localization (i18n).
+  - `pages/`: Contains the main page components or views of the application.
 
-- Configure the top-level `parserOptions` property like this:
+### Additional Details
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
+- **Layout**: The `layout/` directory typically includes components that define the structure of the application's UI, such as header, footer, sidebar, etc.
+- **Routes**: The `routes/` directory includes configuration related to routing, such as defining routes using React Router or another routing library.
+- **Hooks**: The `hooks/` directory contains custom hooks used to encapsulate logic that can be reused across different components.
+- **Components**: The `components/` directory houses reusable UI components that are used multiple times throughout the application.
+- **Locales**: The `locales/` directory includes localization files for supporting multiple languages and translations within the application.
+- **Pages**: The `pages/` directory contains the main page components or views of the application, organized by different routes or sections of the app.
