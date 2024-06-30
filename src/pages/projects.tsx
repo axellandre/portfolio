@@ -21,7 +21,7 @@ export default function ProjectsPage() {
             }}
         >
             <Grid container>
-                <Grid item xs={12}>
+        <Grid item xs={12} mt={{lg:10, md: '5vh', xs: 0, sm: 20}}>
                     <Stack>
                         <Typography
                             variant="h4"
@@ -44,10 +44,10 @@ export default function ProjectsPage() {
                                 }}
                             />
                         </Stack>
-                        <Stack direction="row" justifyContent="center" alignItems="center" mt={{xs: 10}} pl={{ xs: "35px"}}>
+                        <Stack direction="row" justifyContent="center" alignItems="center" mt={{xs: 10, md: 4, lg:10}} pl={{ xs: "35px", lg: "0px"}}>
                             <Grid container spacing={2} justifyContent="center" alignItems="center">
                                 {skeletonCards.map((_, index) => (
-                                    <Grid item key={index} xs={12} sm={6} md={4}>
+                                    <Grid item key={index} xs={12} sm={6} md={4} lg={0}>
                                         <SkeletonCard />
                                     </Grid>
                                 ))}

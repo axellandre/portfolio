@@ -20,7 +20,7 @@ export default function AboutPage() {
       }}
     >
       <Grid container spacing={3}>
-        <Grid item xs={12}>
+        <Grid item xs={12} mt={{lg:10, md: '5vh', xs: 0, sm: 20}}>
           <Stack>
             <Typography
               variant="h4"
@@ -48,10 +48,10 @@ export default function AboutPage() {
               component="img"
               loading="lazy"
               sx={{
-                maxHeight: { xs: 70, md: 50, sm: 60 },
-                maxWidth: { xs: 70, md: 50, sm: 60 },
+                maxHeight: { xs: 50, md: 60, sm: 60, lg: 70 },
+                maxWidth: { xs: 50, md: 60, sm: 60, lg: 70 },
                 color: palette.primary,
-                mt: 4,
+                mt: {lg:4},
               }}
               src={quoteMark}
             />
@@ -62,7 +62,7 @@ export default function AboutPage() {
                 fontWeight: 700,
                 lineHeight: 'normal',
                 color: palette.primary,
-                fontSize: { xs: '1.5em', sm: '2rem', md: '2.5rem' },
+                fontSize: { xs: '1.5em', sm: '2rem', md: '2rem', lg: '2.5rem' },
               }}
               dangerouslySetInnerHTML={{ __html: t('about.description') }}
             />
@@ -71,8 +71,8 @@ export default function AboutPage() {
             component="img"
             loading="lazy"
             sx={{
-              maxHeight: { xs: 70, md: 50, sm: 60 },
-              maxWidth: { xs: 70, md: 50, sm: 60 },
+              maxHeight: { xs: 50, md: 60, sm: 60, lg: 70 },
+              maxWidth: { xs: 50, md: 60, sm: 60, lg: 70 },
               color: palette.primary,
               transform: 'scaleX(-1)',
               marginLeft: 'auto',
