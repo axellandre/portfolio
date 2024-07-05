@@ -22,7 +22,7 @@ export default function HomePage() {
       spacing={2}
       justifyContent="center"
       alignItems="center"
-      sx={{ marginTop: { xs: "5vh", sm: "5vh", md: "5vh", lg: "25vh" } }}
+      sx={{ marginTop: { xs: "5vh", sm: "5vh", md: "5vh", lg: "25vh" }, marginBottom: 3 }}
     >
       <Grid item xs={12} lg={2} zIndex={1}>
         <Stack direction="column">
@@ -160,7 +160,7 @@ export default function HomePage() {
             width={{ lg: "20px" }}
           >
             <Typography
-              variant={isDesktop ? "h4" : "h5"}
+              variant={isDesktop ? "h4" : "h6"}
               sx={{
                 fontStyle: "normal",
                 fontWeight: 700,
@@ -183,7 +183,7 @@ export default function HomePage() {
               justifyContent={{ xs: "center", lg: "initial" }}
             >
               <Typography
-                variant="body2"
+                variant={isDesktop ? "body2" : "body1"}
                 sx={{
                   fontStyle: "normal",
                   fontWeight: 600,
