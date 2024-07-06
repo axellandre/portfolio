@@ -22,7 +22,10 @@ export default function HomePage() {
       spacing={2}
       justifyContent="center"
       alignItems="center"
-      sx={{ marginTop: { xs: "5vh", sm: "5vh", md: "5vh", lg: "25vh" }, marginBottom: 3 }}
+      sx={{
+        marginTop: { xs: "5vh", sm: "5vh", md: "5vh", lg: "25vh" },
+        marginBottom: "5vh",
+      }}
     >
       <Grid item xs={12} lg={2} zIndex={1}>
         <Stack direction="column">
