@@ -181,6 +181,7 @@ export default function HomePage() {
               direction="row"
               alignItems="center"
               justifyContent={{ xs: "center", lg: "initial" }}
+              marginBottom={3}
             >
               <Typography
                 variant={isDesktop ? "body2" : "body1"}
