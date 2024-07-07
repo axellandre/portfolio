@@ -175,32 +175,34 @@ export default function HomePage() {
               {t("home.job")}
             </Typography>
           </Stack>
-          <Link
-            href="#/about"
-            sx={{ textDecorationLine: "none", color: palette.secondary }}
-            zIndex={1}
-          >
-            <Stack
-              direction="row"
-              alignItems="center"
-              justifyContent={{ xs: "center", lg: "initial" }}
-              marginBottom={3}
+          {isDesktop && (
+            <Link
+              href="#/about"
+              sx={{ textDecorationLine: "none", color: palette.secondary }}
+              zIndex={1}
             >
-              <Typography
-                variant={isDesktop ? "body2" : "body1"}
-                sx={{
-                  fontStyle: "normal",
-                  fontWeight: 600,
-                  lineHeight: "normal",
-                  p: 1,
-                  m: 0,
-                }}
+              <Stack
+                direction="row"
+                alignItems="center"
+                justifyContent={{ xs: "center", lg: "initial" }}
+                marginBottom={3}
               >
-                {t("home.moreInformations")}
-              </Typography>
-              <ArrowForwardIcon />
-            </Stack>
-          </Link>
+                <Typography
+                  variant={isDesktop ? "body2" : "body1"}
+                  sx={{
+                    fontStyle: "normal",
+                    fontWeight: 600,
+                    lineHeight: "normal",
+                    p: 1,
+                    m: 0,
+                  }}
+                >
+                  {t("home.moreInformations")}
+                </Typography>
+                <ArrowForwardIcon />
+              </Stack>
+            </Link>
+          )}
         </Stack>
       </Grid>
     </Grid>
