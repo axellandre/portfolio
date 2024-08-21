@@ -1,41 +1,43 @@
 const en = {
-  global: { copyright: '© {{currentYear}} Axel Landré' },
+  global: { copyright: "© {{currentYear}} Axel Landré" },
   menu: {
-    label: 'Menu',
-    home: 'Home',
-    about: 'About',
-    projects: 'Projects',
-    blog: 'Blog',
-    contact: 'Contact',
-    fr: 'fr',
-    en: 'en',
-    error: '404 Not Found',
+    label: "Menu",
+    home: "Home",
+    about: "About",
+    projects: "Projects",
+    blog: "Blog",
+    contact: "Contact",
+    fr: "fr",
+    en: "en",
+    error: "404 Not Found",
   },
   home: {
-    firstName: 'Axel',
-    lastname: 'Landré',
-    contactMe: 'Contact me',
-    introduction: 'Introduction',
-    job: 'Research & development engineer',
-    technologies: 'React.js / Typescript / Next.js',
-    moreInformations: 'More informations',
+    firstName: "Axel",
+    lastname: "Landré",
+    contactMe: "Contact me",
+    introduction: "Introduction",
+    job: "Research & development engineer",
+    technologies: "React.js / Typescript / Next.js",
+    moreInformations: "More informations",
   },
   about: {
-description: "I am a <span class='highlight'>fullstack JS/TS developer</span> with a passion for creating dynamic and ergonomic user interfaces. As a junior developer, I have gained professional experience with <span class='highlight'>React and Next.js</span>, and I also use <span class='highlight'>TypeScript</span>. Additionally, I work on fullstack side projects using <span class='highlight'>Nest.js</span> for backend."
+      description:
+        "I'm a <span class='highlight'>JS/TS front-end developer</span> based in Rouen and specialising in <span class='highlight'>React.js</span> and <span class='highlight'>Next.js</span>. My aim is to become a fullstack developer using these technologies <span class='highlight'>(React.js, Next.js, Nestjs)</span> through personal projects.",
   },
   error: {
     pageNotFound: "Sorry, page not found!",
-    pageNotFoundDescription: "Sorry, we didn't find the page you were looking for.",
+    pageNotFoundDescription:
+      "Sorry, we didn't find the page you were looking for.",
     urlError: "Maybe you mistyped the URL?",
-    verifySyntax: "Check your spelling."
+    verifySyntax: "Check your spelling.",
   },
   projects: {
     label: "Projects",
-    comingSoon: "Coming soon..."
+    comingSoon: "Coming soon...",
   },
-  account:{
-    language: "Change language"
-  }
+  account: {
+    language: "Change language",
+  },
 };
 
 export default en;

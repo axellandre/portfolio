@@ -1,6 +1,4 @@
-# Portfolio Built with React, TypeScript, Vite, Material-UI, and Biome.js
-
-This portfolio template provides a minimal setup to get started with building a web application using React, TypeScript, Vite, Material-UI, and Biome.js. It includes Hot Module Replacement (HMR) for fast development iteration.
+# Portfolio Built with React, TypeScript, Vite, Material-UI and Biome.js
 
 ## Acknowledgments
 

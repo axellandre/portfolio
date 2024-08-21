@@ -3,7 +3,7 @@ import { palette, errorStyles } from "../theme/theme";
 import useResponsive from "../hooks/useResponsive";
 import { useTranslation } from "react-i18next";
 import { useEffect, ReactNode } from "react";
-import logoError from '../assets/logo_error.svg';
+import logoError from "../assets/logo_error.svg";
 
 interface ErrorNumberProps {
   color: string;
@@ -28,10 +28,7 @@ interface ErrorDescriptionProps {
 }
 
 const ErrorDescription = ({ children }: ErrorDescriptionProps) => (
-  <Typography
-    variant="h6"
-    sx={errorStyles.descriptionText}
-  >
+  <Typography variant="h6" sx={errorStyles.descriptionText}>
     {children}
   </Typography>
 );
@@ -41,7 +38,7 @@ export default function ErrorPage() {
   const { t } = useTranslation();
 
   useEffect(() => {
-    document.title = `${t('menu.error')}`;
+    document.title = `${t("menu.error")}`;
   }, [t]);
 
   const renderErrorNumbers = (size: string) => (
@@ -79,7 +76,7 @@ export default function ErrorPage() {
           component="img"
           alt="character"
           src={logoError}
-          loading='lazy'
+          loading="lazy"
           sx={{ width: "40vh" }}
         />
         <Stack direction="row" mt={isDesktop ? 15 : 0}>
@@ -98,7 +95,7 @@ export default function ErrorPage() {
       >
         {t("error.pageNotFound")}
       </Typography>
-      {renderDescriptions()}
+      {isDesktop && renderDescriptions()}
     </Box>
   );
 }
